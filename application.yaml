@@ -13,7 +13,8 @@ spec:
         server: https://kubernetes.default.svc
         namespace: dev # Namespace where the application will be deployed
     syncPolicy:
-        -CreateNamespace: true # Automatically create the namespace if it doesn't exist
+        syncOptions:
+            - CreateNamespace=true # Automatically create the namespace if it doesn't exist
         automated:
-            SelfHeal: true
-            Prune: true
+            selfHeal: true # Automatically heal the application if it drifts from the desired state
+            prune: true # Automatically prune resources that are no longer defined in the source
