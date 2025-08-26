@@ -17,7 +17,7 @@ spec:
                 app.kubernetes.io/name: guestbook-ui
         spec:
             containers:
-                - image: nginx:latest
+                - image: nginx-latest:latest
                   imagePullPolicy: Always
                   name: guestbook-ui
                   ports:
