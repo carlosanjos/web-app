@@ -4,7 +4,7 @@ metadata:
     name: nginx-static-pv
 spec:
     capacity:
-        storage: 10Gi
+        storage: 1Gi
     accessModes:
         - ReadWriteOnce
     storageClassName: nas
