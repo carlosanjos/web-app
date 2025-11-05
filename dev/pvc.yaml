@@ -7,5 +7,6 @@ spec:
         - ReadWriteOnce
     resources:
         requests:
-            storage: 10Gi
+            storage: 1Gi
     storageClassName: nas
+    volumeName: nginx-static-pv
