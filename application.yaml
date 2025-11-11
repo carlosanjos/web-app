@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
     name: example-application
-    namespace: argocd # Namespace where ArgoCD is installed
+    namespace: argocd
 spec:
     project: default
     source:
@@ -11,10 +11,10 @@ spec:
         path: dev
     destination:
         server: https://kubernetes.default.svc
-        namespace: dev # Namespace where the application will be deployed
+        namespace: dev
     syncPolicy:
         syncOptions:
-            - CreateNamespace=true # Automatically create the namespace if it doesn't exist
+            - CreateNamespace=true
         automated:
-            selfHeal: true # Automatically heal the application if it drifts from the desired state
-            prune: true # Automatically prune resources that are no longer defined in the source
+            selfHeal: true
+            prune: true
